@@ -1,0 +1,38 @@
+<!-- File: client/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cell Clash</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Login/Start Screen -->
+  <div id="start-screen">
+    <h1>Cell Clash</h1>
+    <input type="text" id="nickname" placeholder="Enter nickname" maxlength="15" />
+    <button id="playBtn">Play</button>
+    <!-- Global high scores (populated via script if available) -->
+    <div id="highscores">
+      <h3>All-Time Top Scores</h3>
+      <ol id="highscore-list"></ol>
+    </div>
+  </div>
+
+  <!-- Game Canvas -->
+  <canvas id="gameCanvas" width="800" height="600" style="display:none;"></canvas>
+  
+  <!-- In-Game UI overlay (leaderboard) -->
+  <div id="game-ui" style="display:none;">
+    <div id="leaderboard">
+      <h4>Top Cells</h4>
+      <ol id="leaderboard-list"></ol>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="constants.js"></script>
+  <script src="game.js"></script>               <!-- main game client script -->
+</body>
+</html>
